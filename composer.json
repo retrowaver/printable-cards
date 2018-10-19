@@ -10,5 +10,10 @@
     ],
     "require": {
         "setasign/fpdf": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "PrintableCards\\": "src/"
+        }
     }
 }
