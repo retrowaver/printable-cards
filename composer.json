@@ -1,0 +1,14 @@
+{
+    "name": "retrowaver/printable-cards",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "retrowaver",
+            "email": "23421260+retrowaver@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "setasign/fpdf": "^1.8"
+    }
+}
