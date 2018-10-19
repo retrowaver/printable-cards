@@ -16,9 +16,19 @@ class PdfCardsService implements PrintableCardsServiceInterface
         $this->pageWidth = $fpdf->getPageWidth();
         $this->pageHeight = $fpdf->getPageHeight();
 
+        // Load custom font
+        if (isset($options['font_custom_ttf'])) {
+            $this->fpdf->AddFont(
+                $options['font_custom_ttf'],
+                null,
+                $options['font_custom_ttf'] . '.php'
+            );
+        }
+
+        // Settings
         $this->fpdf->SetFont(
-            $options['font_family'] ?? 'Arial',
-            $options['font_style'] ?? 'B',
+            $options['font_custom_ttf'] ?? $options['font_family'] ?? 'Helvetica',
+            null,
             $options['font_size'] ?? 30
         );
         $this->fpdf->SetMargins(0, 0);
