@@ -1,7 +1,6 @@
 <?php
 
 use PrintableCards\Service\PdfCardsService;
-use FPDF;
 
 define('FPDF_FONTPATH','/home/v/printable-cards/fonts');
 
